@@ -1004,3 +1004,383 @@ body {
 .section-10 .logos-image {
     width: 45%;
 }
+
+/* ========================================
+   ANIMAÇÕES DE SCROLL - MACHAIN
+   ======================================== */
+
+/* Configurações base para animações */
+.section-animate {
+    opacity: 1;
+    transform: none;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.section-animate.animate-in {
+    opacity: 1;
+    transform: none;
+}
+
+/* Fade-in simples para seções 1-6 */
+.section-1-fade,
+.section-2-fade,
+.section-3-fade,
+.section-4-fade,
+.section-5-fade,
+.section-6-fade {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.section-1-fade.fade-in-simple,
+.section-2-fade.fade-in-simple,
+.section-3-fade.fade-in-simple,
+.section-4-fade.fade-in-simple,
+.section-5-fade.fade-in-simple,
+.section-6-fade.fade-in-simple {
+    opacity: 1;
+}
+
+/* Elementos das seções 1-6 com fade-in básico */
+.sections-1-6-element {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.sections-1-6-element.simple-fade-in {
+    opacity: 1;
+}
+
+.element-animate {
+    opacity: 1;
+    transform: none;
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.element-animate.fade-in {
+    opacity: 1;
+    transform: none;
+}
+
+/* Animações apenas para seções 7-10 */
+.section-7 .element-animate,
+.section-8 .element-animate,
+.section-9 .element-animate,
+.section-10 .element-animate {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.section-7 .element-animate.fade-in,
+.section-8 .element-animate.fade-in,
+.section-9 .element-animate.fade-in,
+.section-10 .element-animate.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Cards das seções 1-6 com fade-in simples */
+.section-1 .process-card,
+.section-1 .card,
+.section-1 .benefit-card,
+.section-2 .process-card,
+.section-2 .card,
+.section-2 .benefit-card,
+.section-3 .process-card,
+.section-3 .card,
+.section-3 .benefit-card,
+.section-4 .process-card,
+.section-4 .card,
+.section-4 .benefit-card,
+.section-5 .process-card,
+.section-5 .card,
+.section-5 .benefit-card,
+.section-6 .process-card,
+.section-6 .card,
+.section-6 .benefit-card {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.section-1 .process-card.simple-fade-in,
+.section-1 .card.simple-fade-in,
+.section-1 .benefit-card.simple-fade-in,
+.section-2 .process-card.simple-fade-in,
+.section-2 .card.simple-fade-in,
+.section-2 .benefit-card.simple-fade-in,
+.section-3 .process-card.simple-fade-in,
+.section-3 .card.simple-fade-in,
+.section-3 .benefit-card.simple-fade-in,
+.section-4 .process-card.simple-fade-in,
+.section-4 .card.simple-fade-in,
+.section-4 .benefit-card.simple-fade-in,
+.section-5 .process-card.simple-fade-in,
+.section-5 .card.simple-fade-in,
+.section-5 .benefit-card.simple-fade-in,
+.section-6 .process-card.simple-fade-in,
+.section-6 .card.simple-fade-in,
+.section-6 .benefit-card.simple-fade-in {
+    opacity: 1;
+}
+
+/* Animações específicas para cards - apenas seções 7-10 */
+.section-7 .process-card,
+.section-7 .audience-card,
+.section-7 .benefit-card,
+.section-8 .process-card,
+.section-8 .audience-card,
+.section-8 .benefit-card,
+.section-9 .process-card,
+.section-9 .audience-card,
+.section-9 .benefit-card,
+.section-10 .process-card,
+.section-10 .audience-card,
+.section-10 .benefit-card {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.section-7 .process-card.slide-up,
+.section-7 .audience-card.slide-up,
+.section-7 .benefit-card.slide-up,
+.section-8 .process-card.slide-up,
+.section-8 .audience-card.slide-up,
+.section-8 .benefit-card.slide-up,
+.section-9 .process-card.slide-up,
+.section-9 .audience-card.slide-up,
+.section-9 .benefit-card.slide-up,
+.section-10 .process-card.slide-up,
+.section-10 .audience-card.slide-up,
+.section-10 .benefit-card.slide-up {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Cards das seções 1-6 permanecem normais */
+.section-1 .process-card,
+.section-1 .audience-card,
+.section-1 .benefit-card,
+.section-2 .process-card,
+.section-2 .audience-card,
+.section-2 .benefit-card,
+.section-3 .process-card,
+.section-3 .audience-card,
+.section-3 .benefit-card,
+.section-4 .process-card,
+.section-4 .audience-card,
+.section-4 .benefit-card,
+.section-5 .process-card,
+.section-5 .audience-card,
+.section-5 .benefit-card,
+.section-6 .process-card,
+.section-6 .audience-card,
+.section-6 .benefit-card {
+    opacity: 1;
+    transform: none;
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Dashboard cards permanecem com animação */
+.dashboard-card {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.dashboard-card.slide-up {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Efeito hover melhorado para cards */
+.process-card.card-hover,
+.audience-card.card-hover,
+.benefit-card.card-hover,
+.dashboard-card.card-hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(255, 167, 35, 0.15);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Animação para gráficos e elementos do dashboard */
+.chart-animate {
+    opacity: 0;
+    transform: translateX(-50px) rotateY(20deg);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.chart-animate.fade-in {
+    opacity: 1;
+    transform: translateX(0) rotateY(0);
+}
+
+/* Animação pulsante para o botão do dashboard */
+.pulse-animate {
+    animation: pulse 2s infinite cubic-bezier(0.25, 0, 0.75, 1);
+}
+
+.pulse-animate.fade-in {
+    animation: pulse 2s infinite cubic-bezier(0.25, 0, 0.75, 1);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 167, 35, 0.4);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 20px rgba(255, 167, 35, 0);
+    }
+}
+
+/* Animação para números/valores */
+.number-animate {
+    animation: numberGlow 0.5s ease-in-out;
+}
+
+@keyframes numberGlow {
+    0%, 100% { color: inherit; }
+    50% { 
+        color: #FFA723;
+        text-shadow: 0 0 20px rgba(255, 167, 35, 0.5);
+    }
+}
+
+/* Efeito ripple para botões */
+.btn a {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple-effect {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: ripple 0.6s linear;
+}
+
+@keyframes ripple {
+    to {
+        transform: translate(-50%, -50%) scale(4);
+        opacity: 0;
+    }
+}
+
+/* Animação de entrada suave para títulos - apenas seções 7-10 */
+.section-7 .title.element-animate,
+.section-8 .title.element-animate,
+.section-9 .title.element-animate,
+.section-10 .title.element-animate {
+    transform: translateY(40px);
+    transition-delay: 0.1s;
+}
+
+.section-7 .subtitle.element-animate,
+.section-8 .subtitle.element-animate,
+.section-9 .subtitle.element-animate,
+.section-10 .subtitle.element-animate {
+    transform: translateY(30px);
+    transition-delay: 0.2s;
+}
+
+.section-7 .description.element-animate,
+.section-8 .description.element-animate,
+.section-9 .description.element-animate,
+.section-10 .description.element-animate {
+    transform: translateY(20px);
+    transition-delay: 0.3s;
+}
+
+/* Títulos das seções 1-6 permanecem normais */
+.section-1 .title.element-animate,
+.section-1 .subtitle.element-animate,
+.section-1 .description.element-animate,
+.section-2 .title.element-animate,
+.section-2 .subtitle.element-animate,
+.section-2 .description.element-animate,
+.section-3 .title.element-animate,
+.section-3 .subtitle.element-animate,
+.section-3 .description.element-animate,
+.section-4 .title.element-animate,
+.section-4 .subtitle.element-animate,
+.section-4 .description.element-animate,
+.section-5 .title.element-animate,
+.section-5 .subtitle.element-animate,
+.section-5 .description.element-animate,
+.section-6 .title.element-animate,
+.section-6 .subtitle.element-animate,
+.section-6 .description.element-animate {
+    transform: none;
+    transition-delay: 0s;
+    opacity: 1;
+}
+
+/* Otimização de performance - pausar animações quando não visível */
+.animations-paused * {
+    animation-play-state: paused !important;
+}
+
+/* Paralaxe desabilitado para evitar sobreposições */
+
+/* Animações responsivas */
+@media (max-width: 768px) {
+    .section-animate {
+        transform: translateY(30px);
+    }
+    
+    .element-animate {
+        transform: translateY(20px);
+    }
+    
+    .process-card,
+    .audience-card,
+    .benefit-card {
+        transform: translateY(25px) scale(0.98);
+    }
+    
+    .chart-animate {
+        transform: translateX(-30px);
+    }
+}
+
+/* Suporte para usuários que preferem movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+    .section-animate,
+    .element-animate,
+    .process-card,
+    .audience-card,
+    .benefit-card,
+    .dashboard-card,
+    .chart-animate {
+        transition: opacity 0.3s ease-in-out;
+        transform: none;
+    }
+    
+    .pulse-animate {
+        animation: none;
+    }
+    
+    .ripple-effect {
+        animation: none;
+    }
+}
+
+/* Melhoria na transição de hover para elementos interativos */
+.btn a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 167, 35, 0.3);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Animação suave para mudanças de estado */
+* {
+    transition-property: transform, opacity, box-shadow;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
