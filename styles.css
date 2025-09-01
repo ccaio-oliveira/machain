@@ -11,9 +11,9 @@ body {
 }
 
 .container {
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
-    max-width: 1400px;
+    max-width: 1800px;
 }
 
 .general {
@@ -683,7 +683,7 @@ body {
     width: 50%;
     font-size: 1.4rem;
     color: #ffffff;
-    opacity: 0.5;
+    opacity: 0.5 !important;
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.5;
@@ -699,42 +699,104 @@ body {
 .audience-card {
     height: 280px;
     border-radius: 15px;
+    position: relative;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.audience-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
     padding: 25px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    position: relative;
     overflow: hidden;
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
 }
 
-.audience-card.construtoras {
+.card-front {
+    z-index: 2;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    justify-content: flex-start;
+    text-align: left;
+    padding: 30px 25px;
+}
+
+.card-back h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #f4a261;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-back p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #ffffff;
+    margin: 0 0 20px 0;
+    flex-grow: 1;
+}
+
+.card-back .saiba-mais {
+    font-size: 0.9rem;
+    color: #f4a261;
+    font-weight: 500;
+    text-decoration: underline;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.audience-card.construtoras .card-front {
     background-image: url('images/imoveis-card.png');
 }
 
-.audience-card.incorporadoras {
+.audience-card.incorporadoras .card-front {
     background-image: url('images/incorporadoras-card.png');
 }
 
-.audience-card.gestoras {
+.audience-card.gestoras .card-front {
     background-image: url('images/gestoras-card.png');
 }
 
-.audience-card.proprietarios-imoveis {
+.audience-card.proprietarios-imoveis .card-front {
     background-image: url('images/donos-de-imoveis-card.png');
 }
 
-.audience-card.family-offices {
+.audience-card.family-offices .card-front {
     background-image: url('images/family-card.png');
 }
 
-.audience-card.proprietarios-ativos {
+.audience-card.proprietarios-ativos .card-front {
     background-image: url('images/proprietarios-card.png');
 }
 
-.card-icon {
+.card-front .card-icon {
     position: absolute;
     top: 20px;
     left: 20px;
@@ -748,7 +810,7 @@ body {
     border-radius: 50%;
 }
 
-.audience-card h3 {
+.card-front h3 {
     font-size: 1.5rem;
     font-weight: 300;
     color: #ffffff;
@@ -759,8 +821,8 @@ body {
     position: relative;
 }
 
-/* Overlay para melhor legibilidade do texto */
-.audience-card::before {
+/* Overlay para melhor legibilidade do texto na frente */
+.card-front::before {
     content: '';
     position: absolute;
     top: 0;
@@ -770,10 +832,7 @@ body {
     z-index: 1;
 }
 
-.audience-card:hover {
-    transform: translateY(-5px);
-    transition: all 0.3s ease;
-}
+/* Removido - hover agora é o flip effect */
 
 .section-7-cta {
     text-align: center;
@@ -959,7 +1018,7 @@ body {
 }
 
 .section-10 .cta-title {
-    font-family: 'Roboto Mono', monospace;
+    font-family: sans-serif;
     font-size: 2.8rem;
     font-weight: 700;
     color: #ffffff;
@@ -968,7 +1027,7 @@ body {
 }
 
 .section-10 .cta-subtitle {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     font-weight: 500;
     color: #ffffff;
     margin: 0 0 20px 0;
@@ -976,7 +1035,7 @@ body {
 }
 
 .section-10 .cta-description {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     font-weight: 400;
     color: #ffffff;
     opacity: 0.6;
@@ -998,11 +1057,115 @@ body {
 .section-10 .company-logos {
     display: flex;
     justify-content: center;
-    margin-top: 45px;
+    margin-top: 80px;
 }
 
 .section-10 .logos-image {
     width: 45%;
+}
+
+/* Footer */
+.footer {
+    background-color: #000000;
+    padding: 60px 0 30px 0;
+    color: #ffffff;
+    margin-top: -800px;
+}
+
+.footer-content {
+    margin-bottom: 50px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column h4 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #ffffff;
+    margin: 0 0 15px 0;
+    letter-spacing: 1px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-column ul.legal-links {
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.footer-column li {
+    margin: 0;
+}
+
+.footer-column a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #f4a261;
+}
+
+.footer-column .legal-links span {
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    border-top: 1px solid #333333;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-flame {
+    width: 70%;
+}
+
+.footer-brand {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.footer-copyright {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #ffffff;
+    font-weight: 300;
 }
 
 /* ========================================
@@ -1329,6 +1492,35 @@ body {
 
 /* Paralaxe desabilitado para evitar sobreposições */
 
+/* Responsive para flip cards */
+@media (max-width: 768px) {
+    .target-audience-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .audience-card {
+        height: 250px;
+    }
+    
+    .card-back {
+        padding: 25px 20px;
+    }
+    
+    .card-back h4 {
+        font-size: 0.9rem;
+    }
+    
+    .card-back p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+    
+    .card-front h3 {
+        font-size: 1.3rem;
+    }
+}
+
 /* Animações responsivas */
 @media (max-width: 768px) {
     .section-animate {
@@ -1383,4 +1575,124 @@ body {
 * {
     transition-property: transform, opacity, box-shadow;
     transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Wrapper para eliminar buraco abaixo do footer */
+.main-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    /* Navegação mobile */
+    .nav-container {
+        padding: 20px 0;
+    }
+    
+    .nav-container img {
+        width: 150px;
+    }
+    
+    .machain-btn {
+        font-size: 12px;
+        padding: 8px 16px;
+        border-radius: 20px;
+    }
+    
+    /* Section 1 mobile */
+    .section-1 {
+        background: #000 url('images/eclipse-inicio.png') no-repeat center top;
+        height: 100vh;
+        padding-top: 80px;
+    }
+    
+    .section-1-container {
+        padding: 0 20px;
+        text-align: center;
+        max-width: 100%;
+    }
+    
+    .title {
+        font-size: 1.4rem;
+        font-weight: 600;
+        letter-spacing: 0;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+    
+    .title-thin {
+        font-weight: 300;
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
+    
+    .highline {
+        color: #FFA723;
+    }
+    
+    .subtitle {
+        width: 100%;
+        margin-top: 25px;
+        padding: 0 10px;
+    }
+    
+    .subtitle h2 {
+        font-weight: 200;
+        letter-spacing: 0;
+        font-size: 1rem;
+        line-height: 1.5;
+        opacity: 0.9;
+    }
+    
+    .section-1 .btn {
+        margin-top: 30px;
+    }
+    
+    .btn a {
+        font-size: 14px;
+        padding: 14px 20px;
+        border-radius: 25px;
+        display: inline-block;
+        text-align: center;
+        min-width: 280px;
+    }
+    
+    .container {
+        width: 95%;
+    }
+}
+
+/* Para dispositivos muito pequenos */
+@media (max-width: 480px) {
+    .section-1-container {
+        padding: 0 15px;
+    }
+    
+    .title {
+        font-size: 1.2rem;
+    }
+    
+    .title-thin {
+        font-size: 1.6rem;
+    }
+    
+    .subtitle h2 {
+        font-size: 0.9rem;
+    }
+    
+    .btn a {
+        font-size: 13px;
+        padding: 12px 18px;
+        min-width: 260px;
+    }
+    
+    .nav-container img {
+        width: 100px;
+    }
+    
+    .machain-btn {
+        font-size: 11px;
+        padding: 6px 14px;
+    }
 }
