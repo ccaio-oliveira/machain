@@ -26,7 +26,7 @@ body {
     padding: 12px 24px;
     border-radius: 25.88px;
     color: #fff;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .nav {
@@ -43,6 +43,10 @@ body {
     padding: 40px 0;
 }
 
+.nav-container img {
+    width: 190px;
+}
+
 .machain-btn {
     display: flex;
     align-items: center;
@@ -56,7 +60,7 @@ body {
 
 .section-1 {
     background: #000 url('images/eclipse-inicio.png') no-repeat center top;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,7 +75,7 @@ body {
 }
 
 .title {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     letter-spacing: 0;
 }
@@ -82,7 +86,7 @@ body {
 
 .title-thin {
     font-weight: 300;
-    font-size: 3.5rem;
+    font-size: 2.3rem;
 }
 
 .highline {
@@ -90,17 +94,18 @@ body {
 }
 
 .subtitle {
-    width: 73%;
+    width: 60%;
     margin-top: 35px;
 }
 
 .subtitle h2 {
     font-weight: 200;
     letter-spacing: 0;
+    font-size: 1.0rem;
 }
 
 .section-1 .btn {
-    margin-top: 37px;
+    margin-top: 45px;
 }
 
 .section-2-container {
@@ -113,7 +118,7 @@ body {
 
 .section-2-container .left .general {
     font-weight: 600;
-    font-size: 2.7rem;
+    font-size: 2.0rem;
     margin-bottom: 19px;
 }
 
@@ -121,11 +126,12 @@ body {
     opacity: 0.4;
     font-weight: 400;
     margin-top: 0;
-    font-size: 2.0rem;
+    font-size: 1.5rem;
 }
 
 .section-2-container .left .subtitle {
-    width: 100%;
+    width: 90%;
+    font-size: 0.9rem;
 }
 
 .section-2-container .right {
@@ -134,47 +140,55 @@ body {
 }
 
 .section-2-container .card {
-    margin-left: 40px;
-    width: 285px;
-    min-width: 285px;
-    height: 355px;
-    min-height: 355px;
-    padding: 20px 0px 0px 10px;
+    width: 40%;
+    position: relative;
+    flex-shrink: 0;
 }
 
-.card-token-brasil {
-    background: #000 url('images/card-token-brasil.png') no-repeat center center;
-}
-
-.card-token-global {
-    background: #000 url('images/card-token-global.png') no-repeat center center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.section-2-container .card img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .section-2-container .card .desc {
+    position: absolute;
     opacity: 0.4;
     font-weight: 200;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
+    color: #fff;
+    z-index: 2;
+    left: 10px;
+    padding-right: 10px;
 }
 
 .section-2-container .card .value {
+    position: absolute;
     font-weight: 600;
-    font-size: 1.6rem;
-    margin-top: 8px;
+    font-size: 1.3rem;
+    color: #fff;
+    z-index: 2;
+    left: 10px;
+}
+
+.card-token-brasil {
+    margin-right: 40px;
 }
 
 .card-token-brasil .desc {
-    margin-top: 30px;
+    top: 9%;
 }
 
-.card-token-brasil .desc, .card-token-brasil .value, .card-token-global .desc, .card-token-global .value {
-    margin-left: 10px;
+.card-token-brasil .value {
+    top: 22%;
 }
 
 .card-token-global .desc {
-    margin-top: 150px;
+    top: 190px;
+}
+
+.card-token-global .value {
+    top: 228px;
 }
 
 /* Section 3 - Stack Completo */
@@ -187,31 +201,33 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 500px;
+    height: 450px;
     background: #26262699;
     border-radius: 30px;
     padding: 10px 50px;
 }
 
+.section-3-container .left {
+    width: 35%;
+}
+
 .phone-mockup {
     position: relative;
-    max-width: 400px;
-    width: 400px;
+    width: 100%;
 }
 
 .phone-image {
     width: 100%;
     height: auto;
-    object-fit: contain;
-    filter: drop-shadow(0 20px 40px rgba(255, 167, 35, 0.3));
 }
 
-.section-3 .right {
+.section-3-container .right {
+    width: 75%;
     padding-left: 40px;
 }
 
 .section-3 .content h2 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     font-weight: 100;
     line-height: 1.2;
     margin-bottom: 30px;
@@ -222,7 +238,7 @@ body {
 }
 
 .section-3 .description {
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     line-height: 1.6;
     color: #ffffff;
     margin-bottom: 40px;
@@ -235,13 +251,13 @@ body {
 }
 
 .result-box .label {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     color: #fff;
     font-weight: 600;
 }
 
 .result-box .text {
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: #fff;
     line-height: 1.4;
 }
@@ -261,7 +277,7 @@ body {
 }
 
 .section-4 .content h2 {
-    font-size: 2.7rem;
+    font-size: 2.4rem;
     font-weight: 600;
     line-height: 1.2;
     margin-bottom: 30px;
@@ -270,11 +286,12 @@ body {
 .title-light {
     font-weight: 100 !important;
     color: #ffffff;
-    font-size: 2.6rem;
+    font-size: 2.0rem;
 }
 
 .section-4 .description {
-    font-size: 1.1rem;
+    width: 80%;
+    font-size: 0.9rem;
     line-height: 1.6;
     color: #ffffff;
     margin-bottom: 40px;
@@ -312,7 +329,7 @@ body {
 }
 
 .section-5 .title {
-    font-size: 3rem;
+    font-size: 2.0rem;
     margin-bottom: 60px;
 }
 
@@ -324,16 +341,15 @@ body {
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 10px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .process-card {
-    width: 372px;
     height: 205px;
     background: #000 url('images/bloco-execuc.png') no-repeat center center;
-    background-size: cover;
+    background-size: contain;
     border-radius: 15px;
     padding: 30px 25px 0px;
     display: flex;
@@ -356,7 +372,7 @@ body {
 }
 
 .process-card h3 {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: #ffffff;
     margin-bottom: 15px;
@@ -366,7 +382,7 @@ body {
 }
 
 .process-card p {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #ffffff;
     line-height: 1.4;
     text-align: left;
@@ -385,11 +401,11 @@ body {
 }
 
 .section-6 .left {
-    width: 50%;
+    width: 40%;
 }
 
 .section-6 .title {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 300;
     line-height: 1.2;
     margin-bottom: 40px;
@@ -411,22 +427,21 @@ body {
 }
 
 .benefit-card h3 {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: #ffffff;
     margin-bottom: 8px;
 }
 
 .benefit-card p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: #ffffff;
     opacity: 0.8;
     line-height: 1.4;
 }
 
 .section-6 .right {
-    width: 50%;
-    overflow-x: hidden;
+    width: 60%;
 }
 
 .dashboard-preview {
@@ -440,8 +455,8 @@ body {
 }
 
 .expand-dashboard {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: #FFA723;
     border: none;
@@ -466,7 +481,7 @@ body {
 .expand-dashboard span {
     border: 3px solid #000;
     border-radius: 50%;
-    padding: 2.5px 10px;
+    padding: 1.5px 8px;
 }
 
 .section-6-cta {
@@ -497,6 +512,10 @@ body {
     max-height: 90vh;
     overflow-x: hidden;
     overflow-y: hidden;
+}
+
+.visible .dashboard-container {
+    overflow-y: scroll;
 }
 
 .dashboard-header {
@@ -658,7 +677,6 @@ body {
 
 /* Section 7 - Para quem é a tokenização */
 .section-7 {
-    padding: 50px 0;
     position: relative;
     z-index: 1;
 }
@@ -672,7 +690,7 @@ body {
 
 .section-7-header .title {
     width: 50%;
-    font-size: 3rem;
+    font-size: 2.0rem;
     font-weight: 300;
     line-height: 1.2;
     margin-bottom: 20px;
@@ -681,7 +699,7 @@ body {
 
 .section-7-header .subtitle {
     width: 50%;
-    font-size: 1.4rem;
+    font-size: 1.0rem;
     color: #ffffff;
     opacity: 0.5 !important;
     max-width: 600px;
@@ -692,7 +710,6 @@ body {
 .target-audience-grid {
     display: grid;
     grid-template-columns: repeat(3, 2fr);
-    gap: 30px;
     margin: 0 auto;
 }
 
@@ -702,6 +719,7 @@ body {
     position: relative;
     perspective: 1000px;
     cursor: pointer;
+    scale: 90%;
 }
 
 .card-inner {
@@ -811,7 +829,7 @@ body {
 }
 
 .card-front h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 300;
     color: #ffffff;
     margin: 0;
@@ -836,7 +854,7 @@ body {
 
 .section-7-cta {
     text-align: center;
-    margin-top: 60px;
+    margin-top: 30px;
     padding-top: 40px;
 }
 
@@ -850,45 +868,52 @@ body {
 }
 
 .section-8-container {
+    width: 100%;
     display: flex;
-    align-items: stretch;
+    align-items: center;
     gap: 80px;
 }
 
 .section-8 .left {
-    width: 50%;
+    width: 55%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .section-8 .title {
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     line-height: 1.2;
     color: #ffffff;
+    margin-bottom: 40px;
 }
 
 .title-bold {
     font-weight: bold !important;
 }
 
-.section-8-container .title-thin {
-    font-size: 2.0rem;
+.section-8-container .title-light {
+    font-size: 1.8rem;
     font-weight: 100 !important;
 }
 
 .section-8 .description {
-    font-size: 1.8rem;
+    font-size: 1.0rem;
     line-height: 1.6;
     color: #ffffff;
     opacity: 0.8;
+    margin-bottom: 50px;
 }
 
 .section-8 .right {
     width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .governance-list {
+    width: 80%;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
@@ -916,7 +941,7 @@ body {
 }
 
 .governance-item h3 {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: #ffffff;
     margin-bottom: 10px;
@@ -925,7 +950,7 @@ body {
 }
 
 .governance-item p {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #ffffff;
     line-height: 1.4;
     opacity: 0.9;
@@ -981,7 +1006,7 @@ body {
 }
 
 .partnership-title {
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     font-weight: 600;
     font-family: sans-serif;
     color: #ffffff;
@@ -989,7 +1014,7 @@ body {
 }
 
 .partnership-description {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     line-height: 1.6;
     color: #ffffff;
     opacity: 0.9;
@@ -1019,7 +1044,7 @@ body {
 
 .section-10 .cta-title {
     font-family: sans-serif;
-    font-size: 2.8rem;
+    font-size: 2.0rem;
     font-weight: 700;
     color: #ffffff;
     margin: 0 0 20px 0;
@@ -1027,7 +1052,7 @@ body {
 }
 
 .section-10 .cta-subtitle {
-    font-size: 1.6rem;
+    font-size: 1.0rem;
     font-weight: 500;
     color: #ffffff;
     margin: 0 0 20px 0;
@@ -1035,7 +1060,7 @@ body {
 }
 
 .section-10 .cta-description {
-    font-size: 1.4rem;
+    font-size: 0.9rem;
     font-weight: 400;
     color: #ffffff;
     opacity: 0.6;
@@ -1044,7 +1069,7 @@ body {
 }
 
 .section-10 .next-title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 400;
     margin-bottom: 30px;
     letter-spacing: 1px;
@@ -1052,6 +1077,7 @@ body {
 
 .section-10 .cta-buttons .btn {
     margin-bottom: 40px;
+    font-size: 1.0rem;
 }
 
 .section-10 .company-logos {
@@ -1090,7 +1116,7 @@ body {
 
 .footer-column h4 {
     font-family: 'Roboto Mono', monospace;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 400;
     color: #ffffff;
     margin: 0 0 15px 0;
@@ -1119,7 +1145,7 @@ body {
 .footer-column a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     font-weight: 300;
     transition: color 0.3s ease;
 }
@@ -1490,8 +1516,6 @@ body {
     animation-play-state: paused !important;
 }
 
-/* Paralaxe desabilitado para evitar sobreposições */
-
 /* Responsive para flip cards */
 @media (max-width: 768px) {
     .target-audience-grid {
@@ -1582,6 +1606,33 @@ body {
     position: relative;
     overflow: hidden;
     width: 100%;
+}
+
+/* @media (max-width: ) */
+
+@media (max-width: 1038px) {
+    .title {
+        font-size: 1.5rem !important;
+    }
+
+    .title-thin {
+        font-size: 2.3rem;
+    }
+
+    .section-1-container .subtitle h2 {
+        font-size: 1.0rem;
+    }
+
+    .section-2-container .left {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .section-2-container .subtitle-1 {
+        font-size: 1.2rem !important;
+    }
 }
 
 @media (max-width: 768px) {
