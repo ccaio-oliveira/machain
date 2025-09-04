@@ -202,11 +202,11 @@ body {
 }
 
 .card-token-global .desc {
-    top: 190px;
+    top: 60%;
 }
 
 .card-token-global .value {
-    top: 228px;
+    top: 75%;
 }
 
 /* Section 3 - Stack Completo */
@@ -1725,14 +1725,6 @@ body {
         font-size: 1.3rem;
     }
 
-    .card-token-global .desc {
-        top: 250px;
-    }
-
-    .card-token-global .value {
-        top: 295px;
-    }
-
     .section-3-container {
         height: 350px;
     }
@@ -1912,35 +1904,323 @@ body {
 }
 
 /* Para dispositivos muito pequenos */
-@media (max-width: 480px) {
-    .section-1-container {
-        padding: 0 15px;
+@media (max-width: 500px) {
+    .nav-container {
+        padding: 20px 10px;
     }
-    
+
+    .section-1 img {
+        width: 110%;
+        left: -30px;
+    }
+
     .title {
+        font-size: 0.8rem !important;
+        margin-bottom: 0;
+    }
+
+    .title-thin {
+        font-size: 1.3rem;
+    }
+
+    .subtitle {
+        width: 100%;
+    }
+
+    .subtitle h2 {
+        font-size: 0.8rem;
+    }
+
+    .section-1 .btn {
+        margin-top: 20px;
+    }
+
+    .section-2-container .left .general {
+        font-size: 1.5rem !important;
+    }
+
+    .section-2-container .left .subtitle-1 {
         font-size: 1.2rem;
     }
-    
-    .title-thin {
-        font-size: 1.6rem;
+
+    .section-2-container .left .subtitle {
+        width: 100%;
+        font-size: 0.8rem;
     }
-    
-    .subtitle h2 {
+
+    .section-2-container .right {
+        margin-top: 30px;
+    }
+
+    .section-2-container .card {
+        width: 47%;
+    }
+
+    .section-2-container .card .desc {
+        font-size: 0.6rem;
+    }
+
+    .section-2-container .card .value {
+        font-size: 1.0rem;
+    }
+
+    .card-token-brasil {
+        margin-right: 10px;
+    }
+
+    .section-3-container {
+        padding-left: 30px;
+        flex-direction: column-reverse;
+        height: 550px;
+    }
+
+    .section-3-container .left {
+        width: 100%;
+        position: relative;
+        top: 30%;
+    }
+
+    .section-3-container .right {
+        width: 100%;
+        padding: 0;
+        position: relative;
+        top: 28%;
+    }
+
+    .section-3 .content h2 {
+        font-size: 1.1rem !important;
+    }
+
+    .phone-mockup {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .phone-image {
+        width: 60%;
+        left: auto;
+    }
+
+    .section-4-container {
+        flex-wrap: wrap;
+    }
+
+    .section-4 .left {
+        width: 100%;
+    }
+
+    .section-4 .content h2 {
+        font-size: 1.6rem !important;
+        margin-bottom: 10px;
+    }
+
+    .section-4 .content h2 .title-light {
+        font-size: 1.5rem;
+    }
+
+    .section-4 .content .description {
+        margin-bottom: 20px;
+    }
+
+    .section-4 .content .btn {
+        margin-top: 0px;
+    }
+
+    .section-4 .right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section-4 .building-images {
+        width: 80%;
+        margin: 30px 0;
+    }
+
+    .section-5 {
+        padding-bottom: 40px;
+    }
+
+    .section-5 .title {
+        font-size: 1.5rem !important;
+    }
+
+    .section-6-container .left {
+        margin: 30px 0px 0px;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .process-card {
+        padding: 30px 70px;
+    }
+
+    .process-card h3 {
         font-size: 0.9rem;
     }
-    
-    .btn a {
-        font-size: 13px;
-        padding: 12px 18px;
-        min-width: 260px;
+
+    .process-card p {
+        font-size: 0.8rem;
     }
-    
-    .nav-container img {
-        width: 100px;
+
+    .expand-dashboard {
+        width: 30px;
+        height: 30px;
+        top: 20px;
+        left: -10px;
     }
-    
-    .machain-btn {
-        font-size: 11px;
-        padding: 6px 14px;
+
+    .expand-dashboard span {
+        padding: 1px 10px;
+        border: 1px solid #000;
+    }
+
+    .dashboard-container {
+        padding: 20px;
+    }
+
+    .dashboard-header h2 {
+        font-size: 1.3rem;
+    }
+
+    .dashboard-row {
+        gap: 10px;
+    }
+
+    .dashboard-card {
+        padding: 15px;
+        min-width: 150px;
+    }
+
+    .card-header {
+        margin-bottom: 5px;
+    }
+
+    .chart-card-image {
+        width: 20%;
+    }
+
+    .pipeline-chart {
+        width: 180%;
+    }
+
+    .visible .dashboard-row-bottom {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .visible .pipeline-chart {
+        width: 100%;
+    }
+
+    .section-6-container .title {
+        font-size: 1.4rem !important;
+    }
+
+    .section-7-header {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .section-7-header .title {
+        width: 100%;
+        font-size: 1.4rem !important;
+    }
+
+    .section-7-header .subtitle {
+        width: 100%;
+    }
+
+    .target-audience-grid {
+        gap: 0;
+    }
+
+    .card-back p {
+        font-size: 0.7rem;
+    }
+
+    .section-7-cta {
+        margin-top: 0px;
+    }
+
+    .section-8 {
+        padding: 540px 0;
+    }
+
+    .section-8 .title {
+        font-size: 1.7rem !important;
+    }
+
+    .section-8 .title-light {
+        font-size: 1.6rem;
+    }
+
+    .section-8 .description {
+        font-size: 0.9rem;
+    }
+
+    .section-9-container {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .section-9 .right {
+        width: 100%;
+    }
+
+    .partnership-images {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        margin: 0px auto;
+    }
+
+    .psg-logo-img {
+        width: 100%;
+    }
+
+    .psg-group-image {
+        width: 100%;
+        margin: 0px auto;
+    }
+
+    .partnership-title {
+        font-size: 1.7rem;
+        margin: 20px 0;
+    }
+
+    .section-9 .left {
+        width: 100%;
+    }
+
+    .section-10 .cta-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .cta-content .left {
+        width: 100%;
+    }
+
+    .cta-content .right {
+        width: 80%;
+    }
+
+    .section-10 .logos-image {
+        width: 90%;
+    }
+
+    .footer {
+        padding: 0 0 30px 0;
+    }
+
+    .footer-copyright {
+        font-size: 0.7rem;
     }
 }
