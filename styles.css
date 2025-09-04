@@ -44,6 +44,78 @@ body {
     padding: 40px 0;
 }
 
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.language-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    color: white;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.language-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.language-btn .flag {
+    font-size: 16px;
+}
+
+.language-btn .lang-text {
+    font-weight: 500;
+}
+
+/* Responsividade para navegação */
+@media (max-width: 768px) {
+    .nav-right {
+        gap: 15px;
+    }
+    
+    .language-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    
+    .language-btn .flag {
+        font-size: 14px;
+    }
+    
+    .machain-btn {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+}
+
+@media (max-width: 500px) {
+    .nav-right {
+        gap: 10px;
+    }
+    
+    .language-btn {
+        padding: 5px 10px;
+        font-size: 11px;
+        border-radius: 15px;
+    }
+    
+    .language-btn .flag {
+        font-size: 12px;
+    }
+}
+
 .nav-container img {
     width: 190px;
 }
@@ -1591,6 +1663,15 @@ body {
     .ripple-effect {
         animation: none;
     }
+}
+
+/* Animação suave para mudanças de texto na tradução */
+[data-lang] {
+    transition: opacity 0.3s ease;
+}
+
+.language-switching [data-lang] {
+    opacity: 0.7;
 }
 
 /* Melhoria na transição de hover para elementos interativos */

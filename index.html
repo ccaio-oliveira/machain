@@ -16,7 +16,13 @@
         <div class="container">
             <div class="nav-container">
                 <img src="images/logo-machain.png" alt="Logo Machain">
-                <a href="#" class="machain-btn">CONHEÇA A MACHAIN</a>
+                <div class="nav-right">
+                    <button id="languageToggle" class="language-btn" onclick="toggleLanguage()">
+                        <span class="flag">🇺🇸</span>
+                        <span class="lang-text">EN</span>
+                    </button>
+                    <a href="#" class="machain-btn" data-lang="cta-main">CONHEÇA A MACHAIN</a>
+                </div>
             </div>
         </div>
     </header>
@@ -28,18 +34,18 @@
                 <div class="section-1-container">
                     <div class="title general">
                         <h1>
-                            <span class="highline">TOKENIZAÇÃO</span> 
-                            DE ATIVOS REAIS 
+                            <span class="highline" data-lang="hero-title-highlight">TOKENIZAÇÃO</span> 
+                            <span data-lang="hero-title-main">DE ATIVOS REAIS</span>
                             <br> 
                             <span class="title-thin">
-                                COM EXECUÇÃO DE 
-                                <span class="highline">PONTA A PONTA</span>
+                                <span data-lang="hero-title-sub">COM EXECUÇÃO DE</span>
+                                <span class="highline" data-lang="hero-title-sub2">PONTA A PONTA</span>
                             </span>
                         </h1>
                     </div>
     
                     <div class="subtitle">
-                        <h2>
+                        <h2 data-lang="hero-subtitle">
                             Do ativo físico ao token validado —  com segurança jurídica, operação contínua e transparência na 
                             blockchain focada na soberania de dados e identidade, que utiliza IA avançada para agregação 
                             e análise de dados.
@@ -47,7 +53,7 @@
                     </div>
 
                     <div class="btn">
-                        <a href="#">> AGENDE SUA APRESENTAÇÃO EXECUTIVA</a>
+                        <a href="#" data-lang="cta-presentation">> AGENDE SUA APRESENTAÇÃO EXECUTIVA</a>
                     </div>
                 </div>
             </div>
@@ -58,16 +64,16 @@
                 <div class="section-2-container">
                     <div class="left">
                         <h2 class="title general">
-                            <span class="highline">POR QUE</span>
-                            TOKENIZAR AGORA?
+                            <span class="highline" data-lang="section2-title-highlight">POR QUE</span>
+                            <span data-lang="section2-title-main">TOKENIZAR AGORA?</span>
                         </h2>
     
                         <p class="subtitle-1">
-                            O MERCADO MUDOU. <br>
-                            QUEM NÃO SE ADAPTA, FICA PARA TRÁS.
+                            <span data-lang="section2-subtitle1-line1">O MERCADO MUDOU.</span> <br>
+                            <span data-lang="section2-subtitle1-line2">QUEM NÃO SE ADAPTA, FICA PARA TRÁS.</span>
                         </p>
 
-                        <p class="subtitle">
+                        <p class="subtitle" data-lang="section2-subtitle">
                             A tokenização não é tendência — é realidade operacional. Grandes gestoras globais 
                             já movimentam bilhões em RWAs tokenizados, criando liquidez desde a captação de recursos, 
                             estruturação de operações ou simplesmente possibilitando a movimentação de ativos e direitos a 
@@ -78,16 +84,16 @@
                     <div class="right">
                         <div class="card card-token-brasil">
                             <img src="images/card-token-brasil.png" alt="token brasil">
-                            <p class="desc">
+                            <p class="desc" data-lang="card-brasil-desc">
                                 VALOR MOVIMENTADO NO BRASIL <br> SETOR IMOBILIÁRIO EM 2024
                             </p>
-                            <p class="value">R$ 229 BILHÕES</p>
+                            <p class="value" data-lang="card-brasil-value">R$ 229 BILHÕES</p>
                         </div>
 
                         <div class="card card-token-global">
                             <img src="images/card-token-global.png" alt="token global">
-                            <p class="desc">O VALOR GLOBAL DO MERCADO IMOBILIÁRIO REGISTRADO EM RWA</p>
-                            <p class="value">US$ 11 TRILHÕES</p>
+                            <p class="desc" data-lang="card-global-desc">O VALOR GLOBAL DO MERCADO IMOBILIÁRIO REGISTRADO EM RWA</p>
+                            <p class="value" data-lang="card-global-value">US$ 11 TRILHÕES</p>
                         </div>
                     </div>
                 </div>
@@ -99,25 +105,25 @@
                 <div class="section-3-container">
                     <div class="left">
                         <div class="phone-mockup">
-                            <img src="images/telefone-pt.png" alt="App Matchain Stack Completo" class="phone-image">
+                            <img src="images/telefone-pt.png" alt="App Matchain Stack Completo" class="phone-image" id="phoneImage">
                         </div>
                     </div>
                     
                     <div class="right">
                         <div class="content">
                             <h2 class="title general">
-                                NÃO ENTREGAMOS APENAS <span class="highline-white">TECNOLOGIA.</span><br>
-                                <span class="highline-white">ENTREGAMOS</span> <span class="highline">OPERAÇÃO COMPLETA</span>
+                                <span data-lang="section3-title-part1">NÃO ENTREGAMOS APENAS</span> <span class="highline-white" data-lang="section3-title-highlight1">TECNOLOGIA.</span><br>
+                                <span class="highline-white" data-lang="section3-title-highlight2">ENTREGAMOS</span> <span class="highline" data-lang="section3-title-highlight3">OPERAÇÃO COMPLETA</span>
                             </h2>
                             
-                            <p class="description">
+                            <p class="description" data-lang="section3-description">
                                 Nós estruturamos cada tokenização como um produto real, chancelado pelo direito brasileiro e 
                                 internacional,com todos os componentes necessários para operação profissional de ponta a ponta.
                             </p>
                             
                             <div class="result-box">
-                                <span class="label">Resultado:</span>
-                                <span class="text">Um produto estruturado, não um experimento tecnológico.</span>
+                                <span class="label" data-lang="result-label">Resultado:</span>
+                                <span class="text" data-lang="result-text">Um produto estruturado, não um experimento tecnológico.</span>
                             </div>
                         </div>
                     </div>
@@ -131,11 +137,11 @@
                     <div class="left">
                         <div class="content">
                             <h2 class="title general">
-                                <span class="highline">TOKENIZAÇÃO IMOBILIÁRIA</span><br>
-                                <span class="title-light">A NOVA ERA DA INCORPORAÇÃO</span>
+                                <span class="highline" data-lang="section4-title-highlight">TOKENIZAÇÃO IMOBILIÁRIA</span><br>
+                                <span class="title-light" data-lang="section4-title-light">A NOVA ERA DA INCORPORAÇÃO</span>
                             </h2>
                             
-                            <p class="description">
+                            <p class="description" data-lang="section4-description">
                                 A tokenização imobiliária chegou para otimizar 
                                 estruturas, criar liquidez e profissionalizar 
                                 operações. Incorporadores visionários já utilizam 
@@ -144,7 +150,7 @@
                             </p>
                             
                             <div class="btn">
-                                <a href="#">> AGENDE SUA APRESENTAÇÃO EXECUTIVA</a>
+                                <a href="#" data-lang="cta-presentation">> AGENDE SUA APRESENTAÇÃO EXECUTIVA</a>
                             </div>
                         </div>
                     </div>
@@ -162,38 +168,38 @@
             <div class="container">
                 <div class="section-5-container">
                     <h2 class="title general">
-                        <span class="title-bold">COMO EXECUTAMOS NA</span> <span class="title-light">PRÁTICA:</span>
+                        <span class="title-bold" data-lang="section5-title-bold">COMO EXECUTAMOS NA</span> <span class="title-light" data-lang="section5-title-light">PRÁTICA:</span>
                     </h2>
                     
                     <div class="cards-grid">
                         <div class="process-card">
-                            <h3>DUE DILIGENCE PROFUNDA</h3>
-                            <p>Avaliação de elegibilidade, análise de riscos e viabilidade econômica. Apenas ativos com fundamentos sólidos prosseguem.</p>
+                            <h3 data-lang="process-card1-title">DUE DILIGENCE PROFUNDA</h3>
+                            <p data-lang="process-card1-desc">Avaliação de elegibilidade, análise de riscos e viabilidade econômica. Apenas ativos com fundamentos sólidos prosseguem.</p>
                         </div>
                         
                         <div class="process-card">
-                            <h3>ENGENHARIA DO TOKEN</h3>
-                            <p>Design personalizado de smart contracts, definição de direitos, regras de distribuição e mecanismos de governança.</p>
+                            <h3 data-lang="process-card2-title">ENGENHARIA DO TOKEN</h3>
+                            <p data-lang="process-card2-desc">Design personalizado de smart contracts, definição de direitos, regras de distribuição e mecanismos de governança.</p>
                         </div>
                         
                         <div class="process-card">
-                            <h3>ONBOARDING QUALIFICADO</h3>
-                            <p>KYC/AML robusto, análise de suitability e documentação de investidores dentro dos mais altos padrões regulatórios.</p>
+                            <h3 data-lang="process-card3-title">ONBOARDING QUALIFICADO</h3>
+                            <p data-lang="process-card3-desc">KYC/AML robusto, análise de suitability e documentação de investidores dentro dos mais altos padrões regulatórios.</p>
                         </div>
                         
                         <div class="process-card">
-                            <h3>ARQUITETURA JURÍDICA</h3>
-                            <p>Estruturação de veículos, garantias e documentação legal completa. Cada token representa direitos econômicos claros e executáveis.</p>
+                            <h3 data-lang="process-card4-title">ARQUITETURA JURÍDICA</h3>
+                            <p data-lang="process-card4-desc">Estruturação de veículos, garantias e documentação legal completa. Cada token representa direitos econômicos claros e executáveis.</p>
                         </div>
                         
                         <div class="process-card">
-                            <h3>EMISSÃO CONTROLADA</h3>
-                            <p>Deploy em blockchain enterprise, testes de segurança e validação técnica completa antes do go-live.</p>
+                            <h3 data-lang="process-card5-title">EMISSÃO CONTROLADA</h3>
+                            <p data-lang="process-card5-desc">Deploy em blockchain enterprise, testes de segurança e validação técnica completa antes do go-live.</p>
                         </div>
                         
                         <div class="process-card">
-                            <h3>OPERAÇÃO PERMANENTE</h3>
-                            <p>Gestão contínua, relatórios periódicos, distribuição de rendimentos e suporte a holders.</p>
+                            <h3 data-lang="process-card6-title">OPERAÇÃO PERMANENTE</h3>
+                            <p data-lang="process-card6-desc">Gestão contínua, relatórios periódicos, distribuição de rendimentos e suporte a holders.</p>
                         </div>
                     </div>
                 </div>
@@ -205,34 +211,34 @@
                 <div class="section-6-container">
                     <div class="left">
                         <h2 class="title general">
-                            A ESTRUTURA QUE TRANSFORMA<br>
-                            <span class="highline-white">ATIVOS EM TOKENS</span>
+                            <span data-lang="section6-title-main">A ESTRUTURA QUE TRANSFORMA</span><br>
+                            <span class="highline-white" data-lang="section6-title-highlight">ATIVOS EM TOKENS</span>
                         </h2>
                         
                         <div class="benefits-list">
                             <div class="benefit-card">
-                                <h3>LIQUIDEZ IMEDIATA:</h3>
-                                <p>Fracionamento inteligente e negociação 24/7</p>
+                                <h3 data-lang="benefit1-title">LIQUIDEZ IMEDIATA:</h3>
+                                <p data-lang="benefit1-desc">Fracionamento inteligente e negociação 24/7</p>
                             </div>
                             
                             <div class="benefit-card">
-                                <h3>CUSTO REDUZIDO:</h3>
-                                <p>Menos intermediários, processos automatizados</p>
+                                <h3 data-lang="benefit2-title">CUSTO REDUZIDO:</h3>
+                                <p data-lang="benefit2-desc">Menos intermediários, processos automatizados</p>
                             </div>
                             
                             <div class="benefit-card">
-                                <h3>ALCANCE GLOBAL:</h3>
-                                <p>Investidores qualificados de qualquer jurisdição</p>
+                                <h3 data-lang="benefit3-title">ALCANCE GLOBAL:</h3>
+                                <p data-lang="benefit3-desc">Investidores qualificados de qualquer jurisdição</p>
                             </div>
                             
                             <div class="benefit-card">
-                                <h3>TRANSPARÊNCIA TOTAL:</h3>
-                                <p>Cada transação auditável em tempo real</p>
+                                <h3 data-lang="benefit4-title">TRANSPARÊNCIA TOTAL:</h3>
+                                <p data-lang="benefit4-desc">Cada transação auditável em tempo real</p>
                             </div>
                             
                             <div class="benefit-card">
-                                <h3>ADEQUAÇÃO AO MERCADO TRADICIONAL:</h3>
-                                <p>Tokenização integrada ao modelo clássico, com segurança jurídica.</p>
+                                <h3 data-lang="benefit5-title">ADEQUAÇÃO AO MERCADO TRADICIONAL:</h3>
+                                <p data-lang="benefit5-desc">Tokenização integrada ao modelo clássico, com segurança jurídica.</p>
                             </div>
                         </div>
                     </div>
@@ -245,9 +251,9 @@
                             <div id="dashboardModal" class="dashboard-modal">
                                 <div class="dashboard-container">
                                     <div class="dashboard-header">
-                                        <h2>Dashboard</h2>
+                                        <h2 data-lang="dashboard-title">Dashboard</h2>
                                         <div class="dashboard-actions">
-                                            <button class="new-emission-btn">Nova emissão</button>
+                                            <button class="new-emission-btn" data-lang="dashboard-new-emission">Nova emissão</button>
                                             <button class="close-dashboard" onclick="closeDashboard()">×</button>
                                         </div>
                                     </div>
@@ -255,27 +261,27 @@
                                     <div class="dashboard-content">
                                         <div class="dashboard-row">
                                             <div class="dashboard-card">
-                                                <div class="card-header">Valor total tokenizado</div>
+                                                <div class="card-header" data-lang="dashboard-total-value">Valor total tokenizado</div>
                                                 <div class="card-value">R$ 120.000.000</div>
-                                                <div class="card-subtitle">USD 24.000.000 | 100% do portfólio</div>
+                                                <div class="card-subtitle" data-lang="dashboard-total-subtitle">USD 24.000.000 | 100% do portfólio</div>
                                             </div>
                                             
                                             <div class="dashboard-card">
-                                                <div class="card-header">Ativos Tokenizados</div>
-                                                <div class="card-value">12 ativos</div>
-                                                <div class="card-subtitle">Imóveis, recebíveis, arte, luxo</div>
+                                                <div class="card-header" data-lang="dashboard-assets-title">Ativos Tokenizados</div>
+                                                <div class="card-value" data-lang="dashboard-assets-value">12 ativos</div>
+                                                <div class="card-subtitle" data-lang="dashboard-assets-subtitle">Imóveis, recebíveis, arte, luxo</div>
                                             </div>
                                             
                                             <div class="dashboard-card">
-                                                <div class="card-header">Investidores Ativos</div>
+                                                <div class="card-header" data-lang="dashboard-investors-title">Investidores Ativos</div>
                                                 <div class="card-value">87</div>
-                                                <div class="card-subtitle">320 participações fracionadas</div>
+                                                <div class="card-subtitle" data-lang="dashboard-investors-subtitle">320 participações fracionadas</div>
                                             </div>
                                             
                                             <div class="dashboard-card">
-                                                <div class="card-header">Projetos/Empreendimentos</div>
-                                                <div class="card-value">5 em andamento</div>
-                                                <div class="card-subtitle">2 em captação | 3 concluídos</div>
+                                                <div class="card-header" data-lang="dashboard-projects-title">Projetos/Empreendimentos</div>
+                                                <div class="card-value" data-lang="dashboard-projects-value">5 em andamento</div>
+                                                <div class="card-subtitle" data-lang="dashboard-projects-subtitle">2 em captação | 3 concluídos</div>
                                             </div>
                                         </div>
                                         
@@ -289,23 +295,23 @@
                                             </div>
                                             
                                             <div class="access-card">
-                                                <div class="card-header">Acesso rápido</div>
+                                                <div class="card-header" data-lang="dashboard-quick-access">Acesso rápido</div>
                                                 <div class="quick-access">
                                                     <div class="access-item">
                                                         <img src="images/mdi-people-outline.png" alt="Investidores" class="access-icon">
-                                                        <span>Investidores</span>
+                                                        <span data-lang="dashboard-access-investors">Investidores</span>
                                                     </div>
                                                     <div class="access-item">
                                                         <img src="images/vector.png" alt="Ativos" class="access-icon">
-                                                        <span>Ativos</span>
+                                                        <span data-lang="dashboard-access-assets">Ativos</span>
                                                     </div>
                                                     <div class="access-item">
                                                         <img src="images/octicon-project-16.png" alt="Projetos" class="access-icon">
-                                                        <span>Projetos</span>
+                                                        <span data-lang="dashboard-access-projects">Projetos</span>
                                                     </div>
                                                     <div class="access-item">
                                                         <img src="images/icon-park-outline-protect.png" alt="Compliance" class="access-icon">
-                                                        <span>Compliance</span>
+                                                        <span data-lang="dashboard-access-compliance">Compliance</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -319,7 +325,7 @@
                 
                 <div class="section-6-cta">
                     <div class="btn">
-                        <a href="#">> AGENDE SUA APRESENTAÇÃO EXECUTIVA</a>
+                        <a href="#" data-lang="cta-presentation">> AGENDE SUA APRESENTAÇÃO EXECUTIVA</a>
                     </div>
                 </div>
             </div>
@@ -330,9 +336,9 @@
                 <div class="section-7-container">
                     <div class="section-7-header">
                         <h2 class="title general">
-                            PARA QUEM É A <span class="highline">TOKENIZAÇÃO?</span>
+                            <span data-lang="section7-title-main">PARA QUEM É A</span> <span class="highline" data-lang="section7-title-highlight">TOKENIZAÇÃO?</span>
                         </h2>
-                        <p class="subtitle">
+                        <p class="subtitle" data-lang="section7-subtitle">
                             Esses exemplos ilustram como diferentes setores podem acessar novos fluxos de 
                             capital, investidores e eficiência.
                         </p>
@@ -342,12 +348,12 @@
                         <div class="audience-card construtoras">
                             <div class="card-inner">
                                 <div class="card-front">
-                                    <h3>/ CONSTRUTORAS</h3>
+                                    <h3 data-lang="audience-construtoras">/ CONSTRUTORAS</h3>
                                 </div>
                                 <div class="card-back">
-                                    <h4>O QUE OFERECEMOS:</h4>
-                                    <p>Tokenização de unidades imobiliárias em construção, permitindo venda fracionada antecipada e captação de recursos.</p>
-                                    <span class="saiba-mais">Saiba mais.</span>
+                                    <h4 data-lang="audience-what-we-offer">O QUE OFERECEMOS:</h4>
+                                    <p data-lang="audience-construtoras-desc">Tokenização de unidades imobiliárias em construção, permitindo venda fracionada antecipada e captação de recursos.</p>
+                                    <span class="saiba-mais" data-lang="audience-learn-more">Saiba mais.</span>
                                 </div>
                             </div>
                         </div>
@@ -355,12 +361,12 @@
                         <div class="audience-card incorporadoras">
                             <div class="card-inner">
                                 <div class="card-front">
-                                    <h3>/ INCORPORADORAS</h3>
+                                    <h3 data-lang="audience-incorporadoras">/ INCORPORADORAS</h3>
                                 </div>
                                 <div class="card-back">
-                                    <h4>O QUE OFERECEMOS:</h4>
-                                    <p>Estruturação de SPEs tokenizadas, com participação digital em empreendimentos e distribuição de resultados aos investidores.</p>
-                                    <span class="saiba-mais">Saiba mais.</span>
+                                    <h4 data-lang="audience-what-we-offer-2">O QUE OFERECEMOS:</h4>
+                                    <p data-lang="audience-incorporadoras-desc">Estruturação de SPEs tokenizadas, com participação digital em empreendimentos e distribuição de resultados aos investidores.</p>
+                                    <span class="saiba-mais" data-lang="audience-learn-more-2">Saiba mais.</span>
                                 </div>
                             </div>
                         </div>
@@ -368,12 +374,12 @@
                         <div class="audience-card gestoras">
                             <div class="card-inner">
                                 <div class="card-front">
-                                    <h3>/ GESTORAS DE FUNDOS</h3>
+                                    <h3 data-lang="audience-gestoras">/ GESTORAS DE FUNDOS</h3>
                                 </div>
                                 <div class="card-back">
-                                    <h4>O QUE OFERECEMOS:</h4>
-                                    <p>Criação de fundos imobiliários tokenizados e recebíveis estruturados, ampliando liquidez e base de investidores.</p>
-                                    <span class="saiba-mais">Saiba mais.</span>
+                                    <h4 data-lang="audience-what-we-offer-3">O QUE OFERECEMOS:</h4>
+                                    <p data-lang="audience-gestoras-desc">Criação de fundos imobiliários tokenizados e recebíveis estruturados, ampliando liquidez e base de investidores.</p>
+                                    <span class="saiba-mais" data-lang="audience-learn-more-3">Saiba mais.</span>
                                 </div>
                             </div>
                         </div>
@@ -381,12 +387,12 @@
                         <div class="audience-card proprietarios-imoveis">
                             <div class="card-inner">
                                 <div class="card-front">
-                                    <h3>/ PROPRIETÁRIOS<br>DE IMÓVEIS</h3>
+                                    <h3 data-lang="audience-proprietarios">/ PROPRIETÁRIOS<br>DE IMÓVEIS</h3>
                                 </div>
                                 <div class="card-back">
-                                    <h4>O QUE OFERECEMOS:</h4>
-                                    <p>Tokenização de imóveis de alto valor ou patrimônio físico (terrenos, prédios, galpões), ou mercado de luxo, para acesso a liquidez sem venda integral.</p>
-                                    <span class="saiba-mais">Saiba mais.</span>
+                                    <h4 data-lang="audience-what-we-offer-4">O QUE OFERECEMOS:</h4>
+                                    <p data-lang="audience-proprietarios-desc">Tokenização de imóveis de alto valor ou patrimônio físico (terrenos, prédios, galpões), ou mercado de luxo, para acesso a liquidez sem venda integral.</p>
+                                    <span class="saiba-mais" data-lang="audience-learn-more-4">Saiba mais.</span>
                                 </div>
                             </div>
                         </div>
@@ -394,12 +400,12 @@
                         <div class="audience-card family-offices">
                             <div class="card-inner">
                                 <div class="card-front">
-                                    <h3>/ FAMILY OFFICES</h3>
+                                    <h3 data-lang="audience-family-offices">/ FAMILY OFFICES</h3>
                                 </div>
                                 <div class="card-back">
-                                    <h4>O QUE OFERECEMOS:</h4>
-                                    <p>Veículos tokenizados para gestão e diversificação patrimonial, com foco em imóveis, recebíveis e ativos alternativos.</p>
-                                    <span class="saiba-mais">Saiba mais.</span>
+                                    <h4 data-lang="audience-what-we-offer-5">O QUE OFERECEMOS:</h4>
+                                    <p data-lang="audience-family-offices-desc">Veículos tokenizados para gestão e diversificação patrimonial, com foco em imóveis, recebíveis e ativos alternativos.</p>
+                                    <span class="saiba-mais" data-lang="audience-learn-more-5">Saiba mais.</span>
                                 </div>
                             </div>
                         </div>
@@ -407,12 +413,12 @@
                         <div class="audience-card proprietarios-ativos">
                             <div class="card-inner">
                                 <div class="card-front">
-                                    <h3>/ PROPRIETÁRIOS DE<br>ATIVOS E DIREITOS</h3>
+                                    <h3 data-lang="audience-proprietarios-ativos">/ PROPRIETÁRIOS DE<br>ATIVOS E DIREITOS</h3>
                                 </div>
                                 <div class="card-back">
-                                    <h4>O QUE OFERECEMOS:</h4>
-                                    <p>Tokenização de obras de arte, joias, carros e artigos exclusivos, com registro de procedência e possibilidade de fracionamento.</p>
-                                    <span class="saiba-mais">Saiba mais.</span>
+                                    <h4 data-lang="audience-what-we-offer-6">O QUE OFERECEMOS:</h4>
+                                    <p data-lang="audience-proprietarios-ativos-desc">Tokenização de obras de arte, joias, carros e artigos exclusivos, com registro de procedência e possibilidade de fracionamento.</p>
+                                    <span class="saiba-mais" data-lang="audience-learn-more-6">Saiba mais.</span>
                                 </div>
                             </div>
                         </div>
@@ -420,7 +426,7 @@
                     
                     <div class="section-7-cta">
                         <div class="btn">
-                            <a href="#">> AGENDE SUA APRESENTAÇÃO EXECUTIVA</a>
+                            <a href="#" data-lang="cta-presentation">> AGENDE SUA APRESENTAÇÃO EXECUTIVA</a>
                         </div>
                     </div>
                 </div>
@@ -432,40 +438,40 @@
                 <div class="section-8-container">
                     <div class="left">
                         <h2 class="title general">
-                            <span class="title-bold">GOVERNANÇA & COMPLIANCE:</span><br>
-                            <span class="title-light">POR QUE ISSO IMPORTA?</span>
+                            <span class="title-bold" data-lang="section8-title-bold">GOVERNANÇA & COMPLIANCE:</span><br>
+                            <span class="title-light" data-lang="section8-title-light">POR QUE ISSO IMPORTA?</span>
                         </h2>
                         
-                        <p class="description">
+                        <p class="description" data-lang="section8-description">
                             Tokenização sem compliance é especulação. Investidores sofisticados exigem governança profissional.
                         </p>
 
                         <div class="result-box">
-                            <span class="label">Resultado:</span>
-                            <span class="text">Cada token tem lastro verificável e conformidade regulatória integral.</span>
+                            <span class="label" data-lang="result-label-2">Resultado:</span>
+                            <span class="text" data-lang="result-text-2">Cada token tem lastro verificável e conformidade regulatória integral.</span>
                         </div>
                     </div>
                     
                     <div class="right">
                         <div class="governance-list">
                             <div class="governance-item">
-                                <h3>ESTRUTURAS JURÍDICAS</h3>
-                                <p>conforme legislações brasileiras e internacionais.</p>
+                                <h3 data-lang="governance-estruturas-title">ESTRUTURAS JURÍDICAS</h3>
+                                <p data-lang="governance-estruturas-desc">conforme legislações brasileiras e internacionais.</p>
                             </div>
 
                             <div class="governance-item">
-                                <h3>KYC/AML COMPLETO</h3>
-                                <p>com verificação de origem de recursos.</p>
+                                <h3 data-lang="governance-kyc-title">KYC/AML COMPLETO</h3>
+                                <p data-lang="governance-kyc-desc">com verificação de origem de recursos.</p>
                             </div>
 
                             <div class="governance-item">
-                                <h3>AUDITORIA CONTÍNUA</h3>
-                                <p>com relatórios transparentes.</p>
+                                <h3 data-lang="governance-auditoria-title">AUDITORIA CONTÍNUA</h3>
+                                <p data-lang="governance-auditoria-desc">com relatórios transparentes.</p>
                             </div>
 
                             <div class="governance-item">
-                                <h3>PROTEÇÃO DE DADOS</h3>
-                                <p>conforme LGPD.</p>
+                                <h3 data-lang="governance-protecao-title">PROTEÇÃO DE DADOS</h3>
+                                <p data-lang="governance-protecao-desc">conforme LGPD.</p>
                             </div>
                         </div>
                     </div>
@@ -485,9 +491,9 @@
                     <div class="right">
                         <img src="images/psg.png" alt="Paris Saint-Germain" class="psg-logo-img">
                         
-                        <h2 class="partnership-title">PARCEIRO OFICIAL</h2>
+                        <h2 class="partnership-title" data-lang="partnership-title">PARCEIRO OFICIAL</h2>
                         
-                        <p class="partnership-description">
+                        <p class="partnership-description" data-lang="partnership-description">
                             Matchain é a infraestrutura de tokenização e identidade digital 
                             para o Web3, unindo ativos reais, dados e inteligência artificial em 
                             um ecossistema seguro e global.
@@ -502,12 +508,12 @@
             <div class="container">
                 <div class="cta-content">
                     <div class="left">
-                        <h2 class="cta-title">O MOMENTO É AGORA</h2>
-                        <p class="cta-subtitle">
+                        <h2 class="cta-title" data-lang="cta-title">O MOMENTO É AGORA</h2>
+                        <p class="cta-subtitle" data-lang="cta-subtitle">
                             Seus ativos merecem a liquidez que
                             apenas a tokenização pode oferecer.
                         </p>
-                        <p class="cta-description">
+                        <p class="cta-description" data-lang="cta-description">
                             Grandes gestoras já movimentam bilhões em
                             RWAs tokenizados. O mercado está formado,
                             a regulamentação está clara, a tecnologia
@@ -516,14 +522,14 @@
                     </div>
                     
                     <div class="right">
-                        <h3 class="next-title highline">SEJA O PRÓXIMO.</h3>
+                        <h3 class="next-title highline" data-lang="next-title">SEJA O PRÓXIMO.</h3>
                         
                         <div class="cta-buttons">
                             <div class="btn">
-                                <a href="#">> AGENDE SUA APRESENTAÇÃO EXECUTIVA</a>
+                                <a href="#" data-lang="cta-presentation-2">> AGENDE SUA APRESENTAÇÃO EXECUTIVA</a>
                             </div>
                             <div class="btn">
-                                <a href="#">> FALE COM NOSSO ESPECIALISTA EM RWA</a>
+                                <a href="#" data-lang="cta-specialist">> FALE COM NOSSO ESPECIALISTA EM RWA</a>
                             </div>
                         </div>
                     </div>
@@ -542,7 +548,7 @@
             <div class="footer-content">
                 <div class="footer-links">
                     <div class="footer-column">
-                        <h4>SITES</h4>
+                        <h4 data-lang="footer-sites">SITES</h4>
                         <ul>
                             <li><a href="#">Matchain</a></li>
                             <li><a href="#">TechLaw</a></li>
@@ -550,7 +556,7 @@
                     </div>
                     
                     <div class="footer-column">
-                        <h4>SOCIALS</h4>
+                        <h4 data-lang="footer-socials">SOCIALS</h4>
                         <ul>
                             <li><a href="#">Linkedin</a></li>
                             <li><a href="#">Twitter</a></li>
@@ -559,11 +565,11 @@
                     </div>
                     
                     <div class="footer-column">
-                        <h4>LEGAL</h4>
+                        <h4 data-lang="footer-legal">LEGAL</h4>
                         <ul class="legal-links">
-                            <li><a href="#">Terms of use</a></li>
+                            <li><a href="#" data-lang="footer-terms">Terms of use</a></li>
                             <li><span>|</span></li>
-                            <li><a href="#">Disclaimer</a></li>
+                            <li><a href="#" data-lang="footer-disclaimer">Disclaimer</a></li>
                         </ul>
                     </div>
                 </div>
@@ -575,8 +581,8 @@
                 </div>
                 
                 <div class="footer-copyright">
-                    <span>All Rights Reserved</span>
-                    <span>© 2024 Matchain</span>
+                    <span data-lang="footer-rights">All Rights Reserved</span>
+                    <span data-lang="footer-copyright">© 2024 Matchain</span>
                 </div>
             </div>
         </div>
