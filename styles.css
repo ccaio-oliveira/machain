@@ -152,6 +152,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
 }
 
 .title {
@@ -2303,5 +2304,71 @@ body {
 
     .footer-copyright {
         font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 430px) {
+    .machain-btn {
+        font-size: 0.7rem;
+    }
+
+    .title {
+        font-size: 0.7rem !important;
+    }
+
+    .title-thin {
+        font-size: 1.2rem;
+    }
+
+    .subtitle h2 {
+        font-size: 0.7rem;
+    }
+
+    .btn a {
+        font-size: 0.7rem;
+    }
+
+    .section-2-container .left .subtitle-1 {
+        font-size: 1rem;
+    }
+
+    .section-2-container .left .subtitle {
+        font-size: 0.7rem;
+    }
+
+    .card-token-global .value {
+        top: 77%;
+    }
+
+    .section-3 {
+        padding-bottom: 250px;
+    }
+
+    .section-3-container .right {
+        top: 42%;
+    }
+
+    .section-3 .content h2 {
+        font-size: 1rem !important;
+    }
+
+    .section-3-container .left {
+        top: 42%;
+    }
+
+    .phone-image {
+        width: 80%;
+    }
+
+    .target-audience-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .section-8 .title {
+        font-size: 1.5rem !important;
+    }
+
+    .footer-links {
+        gap: 40px;
     }
 }
