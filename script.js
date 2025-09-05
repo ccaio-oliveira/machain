@@ -174,7 +174,7 @@ const translations = {
         'section2-subtitle1-line1': 'THE MARKET HAS CHANGED.',
         'section2-subtitle1-line2': 'THOSE WHO DON\'T ADAPT, GET LEFT BEHIND.',
         'section2-subtitle': 'Tokenization is not a trend — it\'s operational reality. Large global asset managers are already moving billions in tokenized RWAs, creating liquidity from fundraising, structuring operations or simply enabling the movement of assets and their corresponding rights.',
-        'card-brasil-desc': 'VALUE MOVED IN BRAZIL <br> REAL ESTATE SECTOR IN 2024',
+        'card-brasil-desc': 'VALUE MOVED IN BRAZIL REAL ESTATE SECTOR IN 2024',
         'card-brasil-value': 'R$ 229 BILLION',
         'card-global-desc': 'THE GLOBAL VALUE OF THE REAL ESTATE MARKET REGISTERED IN RWA',
         'card-global-value': 'US$ 11 TRILLION',
