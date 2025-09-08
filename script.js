@@ -633,7 +633,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Adicionar efeito de hover melhorado para cards
     const interactiveCards = document.querySelectorAll(
-        '.process-card, .audience-card, .benefit-card, .dashboard-card'
+        '.process-card, .benefit-card, .dashboard-card'
     );
     
     interactiveCards.forEach(card => {
@@ -645,6 +645,66 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.remove('card-hover');
         });
     });
+
+    // Controle específico para cards da seção 7 (flip cards) em dispositivos touch/iOS
+    const audienceCards = document.querySelectorAll('.audience-card');
+    
+    // Detectar se é um dispositivo touch
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    
+    if (isTouchDevice) {
+        audienceCards.forEach(card => {
+            // Para dispositivos touch, usar evento de toque
+            card.addEventListener('touchstart', function(e) {
+                e.preventDefault();
+                
+                // Remover classe flipped de todos os outros cards
+                audienceCards.forEach(otherCard => {
+                    if (otherCard !== this) {
+                        otherCard.classList.remove('flipped');
+                    }
+                });
+                
+                // Alternar a classe flipped no card atual
+                this.classList.toggle('flipped');
+            });
+            
+            // Adicionar evento de clique como fallback
+            card.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remover classe flipped de todos os outros cards
+                audienceCards.forEach(otherCard => {
+                    if (otherCard !== this) {
+                        otherCard.classList.remove('flipped');
+                    }
+                });
+                
+                // Alternar a classe flipped no card atual
+                this.classList.toggle('flipped');
+            });
+        });
+        
+        // Fechar cards quando tocar fora
+        document.addEventListener('touchstart', function(e) {
+            if (!e.target.closest('.audience-card')) {
+                audienceCards.forEach(card => {
+                    card.classList.remove('flipped');
+                });
+            }
+        });
+    } else {
+        // Para dispositivos desktop, manter o hover normal
+        audienceCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.classList.add('card-hover');
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.classList.remove('card-hover');
+            });
+        });
+    }
 
     console.log('🚀 Animações de scroll da Machain carregadas com sucesso!');
 });

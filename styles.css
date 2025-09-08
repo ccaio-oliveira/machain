@@ -798,6 +798,10 @@ body {
     perspective: 1000px;
     cursor: pointer;
     scale: 90%;
+    /* iOS compatibility improvements */
+    -webkit-perspective: 1000px;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
 }
 
 .card-inner {
@@ -807,10 +811,28 @@ body {
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
+    /* iOS compatibility improvements */
+    -webkit-transition: -webkit-transform 0.6s;
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
 }
 
+/* Desktop and modern browsers */
 .audience-card:hover .card-inner {
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+
+/* iOS/Touch devices - using touch/tap events */
+@media (hover: none) and (pointer: coarse) {
+    .audience-card {
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    .audience-card.flipped .card-inner {
+        transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
+    }
 }
 
 .card-front,
@@ -819,6 +841,7 @@ body {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     border-radius: 15px;
     padding: 25px;
     display: flex;
@@ -828,14 +851,20 @@ body {
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
+    /* iOS performance optimization */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 .card-front {
     z-index: 2;
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
 }
 
 .card-back {
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
     background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
     justify-content: flex-start;
     text-align: left;
@@ -890,6 +919,50 @@ body {
 
 .audience-card.proprietarios-ativos .card-front {
     background-image: url('images/proprietarios-card.png');
+}
+
+/* iOS/Touch specific improvements for card flip */
+@supports (-webkit-touch-callout: none) {
+    .audience-card {
+        -webkit-transform-style: preserve-3d;
+        -webkit-perspective: 1000px;
+        -webkit-backface-visibility: hidden;
+        transform: translate3d(0, 0, 0); /* Force hardware acceleration */
+        -webkit-transform: translate3d(0, 0, 0);
+    }
+    
+    .card-inner {
+        -webkit-transform-style: preserve-3d;
+        -webkit-backface-visibility: hidden;
+        transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
+    }
+    
+    .card-front,
+    .card-back {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
+    }
+    
+    .card-front {
+        -webkit-transform: rotateY(0deg) translate3d(0, 0, 0);
+        transform: rotateY(0deg) translate3d(0, 0, 0);
+    }
+    
+    .card-back {
+        -webkit-transform: rotateY(180deg) translate3d(0, 0, 0);
+        transform: rotateY(180deg) translate3d(0, 0, 0);
+    }
+}
+
+/* Active state for touch devices */
+.audience-card:active {
+    transform: scale(0.98);
+    -webkit-transform: scale(0.98);
+    transition: transform 0.1s ease;
+    -webkit-transition: -webkit-transform 0.1s ease;
 }
 
 .card-front .card-icon {
@@ -1991,6 +2064,10 @@ body {
         padding: 20px 10px;
     }
 
+    .section-1 {
+        height: 80vh;
+    }
+
     .section-1 img {
         width: 110%;
         left: -30px;
@@ -2082,7 +2159,7 @@ body {
 
     .phone-image {
         width: 60%;
-        left: auto;
+        left: -5%;
     }
 
     .section-4-container {
