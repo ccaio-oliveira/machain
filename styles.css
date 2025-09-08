@@ -2127,6 +2127,10 @@ body {
         margin-right: 10px;
     }
 
+    .section-3 {
+        padding-top: 100px;
+    }
+
     .section-3-container {
         padding-left: 30px;
         flex-direction: column-reverse;
