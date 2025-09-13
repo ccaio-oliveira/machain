@@ -175,14 +175,27 @@ body {
 }
 
 .subtitle {
-    width: 60%;
     margin-top: 35px;
 }
 
 .subtitle h2 {
     font-weight: 200;
     letter-spacing: 0;
-    font-size: 1.0rem;
+    font-size: 1.5rem;
+}
+
+.description {
+    width: 70%;
+    margin-top: 25px;
+}
+
+.description p {
+    font-weight: 300;
+    letter-spacing: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #ffffff;
+    opacity: 0.9;
 }
 
 .section-1 .btn {
@@ -196,6 +209,19 @@ body {
     
     .title {
         font-size: 1.0rem !important;
+    }
+    
+    .subtitle {
+        width: 100%;
+    }
+    
+    .description {
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    .description p {
+        font-size: 0.9rem;
     }
 }
 
@@ -377,6 +403,17 @@ body {
     font-weight: 100 !important;
     color: #ffffff;
     font-size: 2.0rem;
+}
+
+.section-4 .subtitle {
+    width: 85%;
+    font-size: 1.0rem;
+    line-height: 1.4;
+    color: #ffffff;
+    margin: 25px 0;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    opacity: 0.3;
 }
 
 .section-4 .description {
